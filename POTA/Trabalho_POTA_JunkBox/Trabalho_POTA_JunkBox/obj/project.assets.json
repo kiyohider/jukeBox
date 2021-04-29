@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\faculdade\\projetos geral\\pessoal\\junkBox\\POTA\\Trabalho_POTA_JunkBox\\Trabalho_POTA_JunkBox\\Trabalho_POTA_JunkBox.csproj",
-      "projectName": "Trabalho_POTA_JunkBox",
-      "projectPath": "D:\\faculdade\\projetos geral\\pessoal\\junkBox\\POTA\\Trabalho_POTA_JunkBox\\Trabalho_POTA_JunkBox\\Trabalho_POTA_JunkBox.csproj",
+      "projectUniqueName": "D:\\faculdade\\projetos geral\\pessoal\\junkBox\\POTA\\Trabalho_POTA_JunkBox\\Trabalho_POTA_JunkBox\\Trabalho_POTA_JunkeBox.csproj",
+      "projectName": "Trabalho_POTA_JunkeBox",
+      "projectPath": "D:\\faculdade\\projetos geral\\pessoal\\junkBox\\POTA\\Trabalho_POTA_JunkBox\\Trabalho_POTA_JunkBox\\Trabalho_POTA_JunkeBox.csproj",
       "packagesPath": "C:\\Users\\natan\\.nuget\\packages\\",
       "outputPath": "D:\\faculdade\\projetos geral\\pessoal\\junkBox\\POTA\\Trabalho_POTA_JunkBox\\Trabalho_POTA_JunkBox\\obj\\",
       "projectStyle": "PackageReference",
@@ -60,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

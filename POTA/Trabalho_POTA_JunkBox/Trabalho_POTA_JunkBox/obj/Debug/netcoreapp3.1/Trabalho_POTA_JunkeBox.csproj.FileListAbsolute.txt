@@ -1,0 +1,13 @@
+D:\faculdade\projetos geral\pessoal\junkBox\POTA\Trabalho_POTA_JunkBox\Trabalho_POTA_JunkBox\bin\Debug\netcoreapp3.1\Trabalho_POTA_JunkeBox.exe
+D:\faculdade\projetos geral\pessoal\junkBox\POTA\Trabalho_POTA_JunkBox\Trabalho_POTA_JunkBox\bin\Debug\netcoreapp3.1\Trabalho_POTA_JunkeBox.deps.json
+D:\faculdade\projetos geral\pessoal\junkBox\POTA\Trabalho_POTA_JunkBox\Trabalho_POTA_JunkBox\bin\Debug\netcoreapp3.1\Trabalho_POTA_JunkeBox.runtimeconfig.json
+D:\faculdade\projetos geral\pessoal\junkBox\POTA\Trabalho_POTA_JunkBox\Trabalho_POTA_JunkBox\bin\Debug\netcoreapp3.1\Trabalho_POTA_JunkeBox.runtimeconfig.dev.json
+D:\faculdade\projetos geral\pessoal\junkBox\POTA\Trabalho_POTA_JunkBox\Trabalho_POTA_JunkBox\bin\Debug\netcoreapp3.1\Trabalho_POTA_JunkeBox.dll
+D:\faculdade\projetos geral\pessoal\junkBox\POTA\Trabalho_POTA_JunkBox\Trabalho_POTA_JunkBox\bin\Debug\netcoreapp3.1\Trabalho_POTA_JunkeBox.pdb
+D:\faculdade\projetos geral\pessoal\junkBox\POTA\Trabalho_POTA_JunkBox\Trabalho_POTA_JunkBox\obj\Debug\netcoreapp3.1\Trabalho_POTA_JunkeBox.AssemblyInfoInputs.cache
+D:\faculdade\projetos geral\pessoal\junkBox\POTA\Trabalho_POTA_JunkBox\Trabalho_POTA_JunkBox\obj\Debug\netcoreapp3.1\Trabalho_POTA_JunkeBox.AssemblyInfo.cs
+D:\faculdade\projetos geral\pessoal\junkBox\POTA\Trabalho_POTA_JunkBox\Trabalho_POTA_JunkBox\obj\Debug\netcoreapp3.1\Trabalho_POTA_JunkeBox.csproj.CoreCompileInputs.cache
+D:\faculdade\projetos geral\pessoal\junkBox\POTA\Trabalho_POTA_JunkBox\Trabalho_POTA_JunkBox\obj\Debug\netcoreapp3.1\Trabalho_POTA_JunkeBox.dll
+D:\faculdade\projetos geral\pessoal\junkBox\POTA\Trabalho_POTA_JunkBox\Trabalho_POTA_JunkBox\obj\Debug\netcoreapp3.1\Trabalho_POTA_JunkeBox.pdb
+D:\faculdade\projetos geral\pessoal\junkBox\POTA\Trabalho_POTA_JunkBox\Trabalho_POTA_JunkBox\obj\Debug\netcoreapp3.1\Trabalho_POTA_JunkeBox.genruntimeconfig.cache
+D:\faculdade\projetos geral\pessoal\junkBox\POTA\Trabalho_POTA_JunkBox\Trabalho_POTA_JunkBox\obj\Debug\netcoreapp3.1\Trabalho_POTA_JunkeBox.csprojAssemblyReference.cache
