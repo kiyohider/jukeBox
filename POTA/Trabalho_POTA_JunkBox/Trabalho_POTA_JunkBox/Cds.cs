@@ -7,17 +7,20 @@ namespace Trabalho_POTA_JukeBox
     class Cds
     {
         int songs;
-        string[] musics = new string[10];
+        string[] musics = new string[12];
         string cdName, singerName;
+
+        
+
         public Cds(string cdName,string singerName,int songs)
         {
             this.songs = songs;
             this.cdName = cdName;
             this.singerName=singerName;
-            tracks();
+            Songs();
+            
         }
-
-        public void tracks()
+        public void Songs()
         {
             for (int i = 0; i < songs; i++)
             {
@@ -26,8 +29,7 @@ namespace Trabalho_POTA_JukeBox
             }
 
         }
-
-        public void ReadTracks()
+        public void ReadSongs()
         {
             for (int i = 0; i < songs; i++)
             {
@@ -39,17 +41,23 @@ namespace Trabalho_POTA_JukeBox
 
             Console.ReadKey();
         }
-
-        public string CdName()
+        public void ReadOneSong(int song)
         {
-            return cdName;
-
+            bool verify = true;
+            do {
+                if (musics[song] != null)
+                {
+                    verify = false;
+                    Console.WriteLine(song + " -  Music name: " + musics[song]);
+                }
+                else
+                    Console.WriteLine("number invalid Choose again: ");
+                    song = Convert.ToInt32(Console.ReadLine());
+            } while (verify);
+            Console.ReadKey();
         }
-        public string SingerName()
-        {
-            return singerName;
 
-        }
-
+        public string CdName1 { get => cdName; set => cdName = value; }
+        public string SingerName1 { get => singerName; set => singerName = value; }
     }
 }

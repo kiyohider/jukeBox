@@ -11,7 +11,6 @@ namespace Trabalho_POTA_JukeBox
         protected static int index = 0;
         protected static bool run = true;
         protected static Cds[] cds = new Cds[10];
-        //protected static List<Cds> cds = new List<Cds>();
         #endregion
 
         #region Main
@@ -36,11 +35,11 @@ namespace Trabalho_POTA_JukeBox
             Console.Clear();           
             Console.WriteLine("=============================================");
             Console.WriteLine("1 - Choose CD");
-            Console.WriteLine("2 - Show CDs");
-            Console.WriteLine("3 - See musics from the cd");
-            Console.WriteLine("4 - Insert cd");
-            Console.WriteLine("5 - Remove cd");
-            Console.WriteLine("6 - Oder");
+            Console.WriteLine("2 - See musics from the cd");
+            Console.WriteLine("3 - Show CDs");
+            Console.WriteLine("4 - Show CDs in Alphabetical");
+            Console.WriteLine("5 - Insert cd");
+            Console.WriteLine("6 - Remove cd");           
             Console.WriteLine("0 - Exit");
             Console.WriteLine("=============================================");
             ExecuteMenuOption();
@@ -60,16 +59,22 @@ namespace Trabalho_POTA_JukeBox
 
                 case "2":
                     Console.Clear();
-                    ShowCds.ShowCd(cds);
-                    Console.ReadKey();
+                    ShowCds.ShowMusics(cds);
                     break;
 
                 case "3":
                     Console.Clear();
-                    ShowCds.ShowMusics(cds);                    
+                    ShowCds.ShowCd(cds);
+                    Console.ReadKey();
                     break;
 
                 case "4":
+                    Console.Clear();
+                    ShowCds.ShowOrderCdName(cds);
+                    Console.ReadKey();
+                    break;
+
+                case "5":
                     Console.Clear();
                     if (ArrayHasFreeSpace(cds))
                     {
@@ -82,7 +87,7 @@ namespace Trabalho_POTA_JukeBox
                     }
                     break;
 
-                case "5":
+                case "6":
                     Console.Clear();
                     if (ArrayHasElements(cds))
                     {
@@ -94,11 +99,7 @@ namespace Trabalho_POTA_JukeBox
                         Console.ReadKey();
                     }
                     break;
-
-                case "6":
-                    ShowCds.ShowOrderCd(cds);
-                    break;
-
+            
                 default:
                     Console.WriteLine("\nInvalid option.");
                     Console.WriteLine("\nPress any key to continue.");

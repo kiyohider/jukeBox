@@ -8,52 +8,52 @@ namespace Trabalho_POTA_JukeBox
     class ShowCds
     {
         #region Show And Order Cds
-        public class CDComparer : IComparer
+        public static void ShowOrderCdName(Cds[] cdsArray)
         {
-
-            int IComparer.Compare(object xx, object yy)
-            {
-                Cds x = (Cds)xx;
-                Cds y = (Cds)yy;
-                return x.CdName().CompareTo(y.CdName());
-            }
-        }
-
-        public static void ShowOrderCd(Cds[] cdsArray)
-        {
-
-            //cdsArray.Sort(new CDComparer());
-            // Array.Sort<Cds>(cdsArray,(x,y)=>string.Compare(x.CdName(), y.CdName()));
-            // Array.Sort(cdsArray, (x, y) => String.Compare(x.CdName(), y.CdName()));
-            //Array.Sort(cdsArray, delegate (Cds user1, Cds user2) {return user1.CdName().CompareTo(user2.CdName());});
-
+            int compare;
+            Cds aux;
             int size = cdsArray.Length;
-            
-            for (int i = 0; i < size; i++)
+
+            for (int i = 0; i < size - 1; i++)
             {
-                if (cdsArray[i] != null)
+                for (int j = i + 1; j < size; j++)
                 {
-                    Console.WriteLine(i + " -  CD name: " + cdsArray[i].CdName() + "  Singer: " + cdsArray[i].SingerName());
+                    if (cdsArray[i] != null && cdsArray[j] != null)
+                    {
+                        compare = string.Compare(cdsArray[i].CdName1, cdsArray[j].CdName1);
+
+                        if (compare == 1)
+                        {
+                            aux = cdsArray[j];
+                            cdsArray[j] = cdsArray[i];
+                            cdsArray[i] = aux;
+                        }
+                    }
                 }
             }
-
+            Print(cdsArray);
         }
         #endregion
 
         #region Show All Cds 
         public static void ShowCd(Cds[] cdsArray)
-        {
+        {           
+            Print(cdsArray);
+        }
+        #endregion
 
+        #region print
+        public static void Print(Cds[] cdsArray)
+        {
             int size = cdsArray.Length;
-            
+
             for (int i = 0; i < size; i++)
             {
                 if (cdsArray[i] != null)
                 {
-                    Console.WriteLine(i + " -  CD name: " + cdsArray[i].CdName() +"  Singer: " + cdsArray[i].SingerName());
+                    Console.WriteLine(i + " -  CD name: " + cdsArray[i].CdName1 + "  Singer: " + cdsArray[i].SingerName1);
                 }
             }
-            
         }
         #endregion
 
@@ -62,18 +62,51 @@ namespace Trabalho_POTA_JukeBox
         {
             Console.WriteLine("choose a cd to see the songs: ");
             ShowCd(cdsArray);
+            bool ok = true;
             int size;
-            while (!int.TryParse(Console.ReadLine(), out size))
+            while (ok)
             {
+                while (!int.TryParse(Console.ReadLine(), out size))
+                {
                 Console.WriteLine("You entered an invalid number");
-                Console.Write("enter number of conversations ");
+                Console.Write("enter number of conversations \n");
+                }          
+                if (cdsArray[size] != null)
+                {
+                    ok = false;
+                    Console.Clear();
+
+                    Console.WriteLine("   " + cdsArray[size].CdName1 + "  ");
+
+                    Console.WriteLine("\n 1 - select one song");
+                    Console.WriteLine("\n 2 - select all songs");
+                    int option;
+                    switch (Console.ReadLine())
+                    {
+                        case "1":
+                            Console.WriteLine("Escolha uma musica: ");
+                            while (!int.TryParse(Console.ReadLine(), out option))
+                            {
+                                Console.WriteLine("You entered an invalid number");
+                                Console.Write("enter number of conversations \n");
+                            }
+                            cdsArray[size].ReadOneSong(option);
+                            break;
+
+                        case "2":
+                            cdsArray[size].ReadSongs();
+                            break;
+
+                        default:
+                            Console.WriteLine("\nInvalid option.");
+                            Console.WriteLine("\nPress any key to continue.");
+                            Console.ReadKey();
+                            break;
+                    }
+                }
             }
-            Console.Clear();
-            Console.WriteLine("   "+ cdsArray[size].CdName()+"  ");
-            cdsArray[size].ReadTracks();
             Console.ReadKey();
         }
         #endregion
-
     }
 }

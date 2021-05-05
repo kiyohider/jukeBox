@@ -9,7 +9,6 @@ namespace Trabalho_POTA_JukeBox
     {
         #region Insert Logic
         public static void InsertCd(Cds[] cdArray)
-        //public static void InsertCd(List<Cds> cdArray)
         {
             InsertCdAtPosition(cdArray, index);
         }
@@ -32,7 +31,7 @@ namespace Trabalho_POTA_JukeBox
         public static void InsertCdAtPosition(Cds[] cdArray, int position)
         {
             string singerName, cdName;
-            int musics;
+            int musics = 0;
             for (int i = index; i > position; i--)
             {
                 cdArray[i] = cdArray[i - 1];
@@ -43,12 +42,17 @@ namespace Trabalho_POTA_JukeBox
             cdName = Console.ReadLine();
             Console.WriteLine("Singer name: ");
             singerName = Console.ReadLine();
-            Console.WriteLine("number of musics: ");
-            while (!int.TryParse(Console.ReadLine(), out musics))
+
+            Console.WriteLine("maximum number of songs : 12");
+            Console.WriteLine("number of musics : ");
+            do
             {
-                Console.WriteLine("You entered an invalid number");
-                Console.Write("enter number of conversations ");
-            }
+                while (!int.TryParse(Console.ReadLine(), out musics))
+                {
+                    Console.WriteLine("You entered an invalid number");
+                    Console.Write("enter number of conversations \n");
+                }
+            } while (musics > 12);
 
             cds[position] = new Cds(cdName, singerName, musics);
 
@@ -74,7 +78,7 @@ namespace Trabalho_POTA_JukeBox
         public static void RemoveCd(Cds[] cdArray, int position)
         {
             Console.Clear();
-            Console.WriteLine(cdArray[position].CdName() + " removed complete.");
+            Console.WriteLine("CD Name : "+cdArray[position].CdName1 + " removed complete.");
 
             for (int i = position; i < index; i++)
             {
@@ -101,14 +105,18 @@ namespace Trabalho_POTA_JukeBox
 
         #region Choose Logic
         static public void ChooseCd(Cds[] cdArray)
-       //static public void ChooseCd(List<Cds> cdArray)
         {
             int chosen = ReceiveUserPosition();
+            while (chosen < 0 || chosen >= index)
+            {
+                InvalidPosition();
+                chosen = ReceiveUserPosition();
+            }
+            Console.Clear();
             Cds support = cdArray[chosen];
-            Console.WriteLine("CD chosen: " + support.CdName());
+            Console.WriteLine("CD chosen: " + support.CdName1);
             cdArray[chosen] = cdArray[0];
             cdArray[0] = support;
-
             Console.ReadKey();
         }
 
