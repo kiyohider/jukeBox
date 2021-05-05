@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\faculdade\\projetos geral\\pessoal\\junkBox\\POTA\\Trabalho_POTA_JunkBox\\Trabalho_POTA_JunkBox\\Trabalho_POTA_JunkeBox.csproj",
-      "projectName": "Trabalho_POTA_JunkeBox",
-      "projectPath": "D:\\faculdade\\projetos geral\\pessoal\\junkBox\\POTA\\Trabalho_POTA_JunkBox\\Trabalho_POTA_JunkBox\\Trabalho_POTA_JunkeBox.csproj",
+      "projectUniqueName": "D:\\faculdade\\projetos geral\\pessoal\\junkBox\\POTA\\Trabalho_POTA_JunkBox\\Trabalho_POTA_JunkBox\\Trabalho_POTA_JukeBox.csproj",
+      "projectName": "Trabalho_POTA_JukeBox",
+      "projectPath": "D:\\faculdade\\projetos geral\\pessoal\\junkBox\\POTA\\Trabalho_POTA_JunkBox\\Trabalho_POTA_JunkBox\\Trabalho_POTA_JukeBox.csproj",
       "packagesPath": "C:\\Users\\natan\\.nuget\\packages\\",
       "outputPath": "D:\\faculdade\\projetos geral\\pessoal\\junkBox\\POTA\\Trabalho_POTA_JunkBox\\Trabalho_POTA_JunkBox\\obj\\",
       "projectStyle": "PackageReference",
